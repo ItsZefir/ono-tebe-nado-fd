@@ -12,7 +12,6 @@
 .header_menu {
   display: flex;
   justify-self: center;
-
 }
 
 .header__links-list {
@@ -51,10 +50,6 @@
   text-underline-offset: 4px;
 }
 
-.header__address {
-  list-style-type: none;
-}
-
 /* первая секция, выставляем фон*/
 
 .cover {
@@ -63,11 +58,10 @@
   color: white;
   position: relative;
   background-image: url("/images/cover.jpg");
-  height: 757px; /* не забудь поставить минимальную высоту */
+  min-height: 757px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  align-items: center;
   z-index: 0;
 }
 
@@ -84,10 +78,10 @@
 .cover__title {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   text-align: center;
+  font-weight: 700;
   font-size: 100px;
-  padding: 165px 50px 207px 50px;
+  padding: 165px 50px 0 50px;
   letter-spacing: 31px;
 }
 
@@ -116,29 +110,34 @@
 
 .cover__description {
   display: flex;
-  align-items: baseline;
   z-index: 1;
-  justify-content: space-evenly;
+  padding: 106px 50px 50px 50px;
+  justify-content: space-between;
 }
 
 /* сброс настроек шрифта и выставление позиции текста */
 
 .cover__description-text {
-  color: white;
+  display: inline;
   text-transform: uppercase;
   font-size: 22px;
+  word-spacing: 16px;
   font-weight: normal;
+  align-content: center;
 }
 
 /* сама кнопка */
 
 .bet-button {
   background: transparent;
-  font-family: Raleway, sans-serif;
-  color: white;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 22px;
+  padding: 12px 31px;
   border: 1px solid white;
+  color: white;
+  width: 256px;
+  height: 51px;
 }
 
 /* секция лоты */
@@ -238,7 +237,7 @@
 /* секция about */
 
 .about {
-  margin-top: 148px;
+  margin-top: 120px;
   color: black;
   font-family: "Raleway", sans-serif;
 }
@@ -247,7 +246,7 @@
 
 .about__column {
   display: grid;
-  padding: 34px 24px 0px;
+  padding: 35px 24px 0px;
   grid-template-columns: 334px repeat(1, 1fr);
   gap: 25px;
 }
@@ -275,8 +274,7 @@
 .about_content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding-top: 100px;
+  padding-top: 136px;
 }
 
 .about__title {
@@ -291,12 +289,12 @@
 
 /* два класса для разбивки текста */
 
-.text_up {
-  padding-top: 76px;
+.padding_up {
+  padding-top: 100px;
 }
 
-.text_down {
-  padding-top: 25px;
+.padding_down {
+  padding-top: 24px;
 }
 
 /* подвал */
@@ -310,17 +308,14 @@
 /*адресса */
 
 .footer__address {
+  display: flex;
+  flex-direction: column;
   font-style: normal;
   list-style-type: none;
   font-size: 18px;
   font-weight: 400;
   text-underline-offset: 4px;
-}
-
-.footer__address-list {
-  list-style-type: none;
   padding-left: 50px;
-  padding-bottom: 116px;
 }
 
 /*меню навигации */
@@ -334,6 +329,7 @@
   font-size: 18px;
   font-weight: 400;
   text-underline-offset: 4px;
+  padding-bottom: 115px;
 }
 
 /* ссылки на социальные сети */
