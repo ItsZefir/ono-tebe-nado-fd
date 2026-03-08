@@ -9,10 +9,19 @@
 
 /* делаем отступы между элементами */
 
-.header__link-list-item {
+.header_menu {
+  display: flex;
+  justify-self: center;
+
+}
+
+.header__links-list {
   display: flex;
   gap: 32px;
   list-style-type: circle;
+  font-size: 18px;
+  font-weight: 400;
+  text-underline-offset: 4px;
 }
 
 /* убираем или добавляем кружки в списке */
@@ -37,6 +46,9 @@
   align-items: flex-start;
   max-width: 240px;
   flex-direction: column;
+  font-size: 18px;
+  font-weight: 400;
+  text-underline-offset: 4px;
 }
 
 .header__address {
@@ -46,14 +58,17 @@
 /* первая секция, выставляем фон*/
 
 .cover {
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+  color: white;
   position: relative;
   background-image: url("/images/cover.jpg");
-  min-height: 757px;
+  height: 757px; /* не забудь поставить минимальную высоту */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   align-items: center;
-  z-index: -1;
+  z-index: 0;
 }
 
 /* Делаем оверлей (более темный задний фон) */
@@ -67,59 +82,62 @@
 /* Первый заголовок, главный текст */
 
 .cover__title {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  text-transform: uppercase;
-  font-family: Raleway, sans-serif;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
   font-size: 100px;
   padding: 165px 50px 207px 50px;
-  letter-spacing: 28px;
+  letter-spacing: 31px;
 }
 
 /* раставляем заголовок */
 
+.aligned-text_left {
+  align-self: flex-start;
+  text-align: center;
+}
+
 .aligned-text_center {
+  align-self: center;
   text-align: center;
 }
 
 .aligned-text_right {
-  text-align: end;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
 }
 
 /* делаем флексбоксом, выставляем отступы и направляем элементы */
 
 .cover__description {
-  position: relative;
   display: flex;
+  align-items: baseline;
   z-index: 1;
-  padding: 0 50px 50px 50px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 /* сброс настроек шрифта и выставление позиции текста */
 
 .cover__description-text {
-  display: inline;
-  font-family: Raleway, sans-serif; 
   color: white;
   text-transform: uppercase;
   font-size: 22px;
-  word-spacing: 16px;
   font-weight: normal;
-  align-content: center;
 }
 
 /* сама кнопка */
 
 .bet-button {
   background: transparent;
-  font-family: Raleway, sans-serif; 
+  font-family: Raleway, sans-serif;
   color: white;
   text-transform: uppercase;
   font-size: 22px;
-  padding: 12px 31px;
   border: 1px solid white;
 }
 
@@ -127,13 +145,13 @@
 
 .lots {
   padding: 180px 24px 0 24px;
-  font-family: Raleway, sans-serif; 
+  font-family: Raleway, sans-serif;
   color: white;
 }
 
 /* заголовок всей секции */
 
-.lots__heading { 
+.lots__heading {
   text-transform: uppercase;
   padding-left: 40px;
   font-weight: 700;
@@ -212,6 +230,9 @@
   padding-top: 30px;
   padding-left: 40px;
   color: black;
+  font-size: 18px;
+  font-weight: 400;
+  text-underline-offset: 4px;
 }
 
 /* секция about */
@@ -272,7 +293,7 @@
 
 .text_up {
   padding-top: 76px;
-} 
+}
 
 .text_down {
   padding-top: 25px;
@@ -283,7 +304,7 @@
 .footer {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  margin-top: 180px; 
+  margin-top: 180px;
 }
 
 /*адресса */
@@ -291,11 +312,15 @@
 .footer__address {
   font-style: normal;
   list-style-type: none;
+  font-size: 18px;
+  font-weight: 400;
+  text-underline-offset: 4px;
 }
 
 .footer__address-list {
   list-style-type: none;
   padding-left: 50px;
+  padding-bottom: 116px;
 }
 
 /*меню навигации */
@@ -306,6 +331,9 @@
 
 .footer__menu-list {
   list-style-type: none;
+  font-size: 18px;
+  font-weight: 400;
+  text-underline-offset: 4px;
 }
 
 /* ссылки на социальные сети */
