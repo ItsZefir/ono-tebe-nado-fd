@@ -195,6 +195,7 @@
 
 .card-link {
   height: 100%;
+  text-decoration: none;
 }
 
 /* сама карточка */
@@ -208,10 +209,6 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-}
-
-.card-link {
-  text-decoration: none;
 }
 
 .card__title {
